@@ -1,0 +1,30 @@
+const express = require('express')
+const app = express()
+const cors = require('cors')
+require('dotenv').config()
+/* const database = require('./config/db') */
+const routes = require('./routes')
+
+
+
+/* Conectar a la base de datos */
+/* database() */
+
+/* Directorio publico */
+app.use( express.static('public') )
+
+/* Habilitar Cors */
+app.use( cors() )
+
+/* Habilitar el body */
+app.use( express.json() )
+app.use( express.urlencoded({ extended: true }) )
+
+/* Rutas */
+app.use( '/api', routes() )
+
+/* Iniciar el servidor */
+app.listen( process.env.PORT, () => {
+
+	console.log(`Server ON => http://localhost:${ process.env.PORT }`)
+})

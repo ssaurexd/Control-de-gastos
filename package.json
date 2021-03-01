@@ -1,0 +1,31 @@
+{
+  "name": "control-de-gatos",
+  "version": "1.0.0",
+  "description": "control-de-gatos",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssaurexd/Control-de-gastos.git"
+  },
+  "author": "Aure",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssaurexd/Control-de-gastos/issues"
+  },
+  "homepage": "https://github.com/ssaurexd/Control-de-gastos#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.18",
+    "multer": "^1.4.2"
+  }
+}
