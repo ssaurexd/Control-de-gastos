@@ -2,13 +2,13 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 require('dotenv').config()
-/* const database = require('./config/db') */
+const database = require('./config/db')
 const routes = require('./routes')
 
 
 
 /* Conectar a la base de datos */
-/* database() */
+database()
 
 /* Directorio publico */
 app.use( express.static('public') )

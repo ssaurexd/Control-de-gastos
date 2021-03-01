@@ -2,6 +2,9 @@ const router = require('express').Router()
 const { body } = require('express-validator')
 const validateInputs = require('../middlewares/validateInputs')
 const { isAuthenticated } = require('../middlewares/auth')
+const {
+	SignIn, SignUp
+} = require('../controllers/user.controller')
 
 
 module.exports = () => {
@@ -33,23 +36,6 @@ module.exports = () => {
 
 	/* Rutas de usuario con autenticacion
 	-------------------------------------------------- */
-	
-	router.post('/users/avatar',
-		isAuthenticated,
-		uploadAvatar
-	)
-	router.put('/users', 
-		isAuthenticated,
-		[
-			body('email')
-				.not().isEmpty().withMessage('El email es obligatorio')
-				.isEmail().withMessage('Ingresa un email valido'),
-			body('name')
-				.not().isEmpty().withMessage('El nombre es obligatorio').escape(),
-			validateInputs
-		],
-		updateUser
-	)
 	
 	/* End of Rutas de usuario con autenticacion
 	-------------------------------------------------- */

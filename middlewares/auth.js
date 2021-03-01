@@ -4,7 +4,7 @@ require('dotenv').config()
 const User = require('../models/User')
 
 
-exports.isAuthenticated = ( req = request, res = response, next ) => {
+exports.isAuthenticated = async ( req = request, res = response, next ) => {
 
 	const token = req.header('x-token')
 
