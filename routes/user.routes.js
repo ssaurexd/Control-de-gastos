@@ -34,11 +34,5 @@ module.exports = () => {
 		SignIn
 	)
 
-	/* Rutas de usuario con autenticacion
-	-------------------------------------------------- */
-	
-	/* End of Rutas de usuario con autenticacion
-	-------------------------------------------------- */
-
 	return router
 }
