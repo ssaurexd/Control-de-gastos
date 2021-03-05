@@ -1,7 +1,7 @@
 # Api para el control de gastos
 Ingresa tus ingresos y gastos y ve obserbando como va el flujo de tu dinero
 ***
-#Host
+# Host
 https://control-de-gastos-api.herokuapp.com
 
 ## Endpoint
