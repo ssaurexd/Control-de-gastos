@@ -2,9 +2,9 @@
 Ingresa tus ingresos y gastos y ve obserbando como va el flujo de tu dinero
 ***
 
-## Enpoint
+## Endpoint
 
-### Enpoint de usuarios
+### Endpoint de usuarios
 ```
 Registro:
 ***
@@ -18,7 +18,7 @@ form-data -> email | password
 
 ```
 
-### Enpoint de ingresos 
+### Endpoint de ingresos 
 ```
 Crear in ingreso: 
 ***
@@ -41,7 +41,7 @@ GET -> /api/entry/:year
 
 ```
 
-### Enpoint de iegresos 
+### Endpoint de iegresos 
 ```
 Crear in egreso: 
 ***
