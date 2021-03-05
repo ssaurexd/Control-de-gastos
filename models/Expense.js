@@ -21,9 +21,14 @@ const ExpenseSchema = new Schema({
 		type: Schema.Types.ObjectId,
 		required: true,
 		ref: 'Entry'
+	},
+	user: {
+		type: Schema.Types.ObjectId,
+		required: true,
+		ref: 'User'
 	}
 }, {
 	timestamps: true
 })
 
-module.exports = model( 'ListShop', ListShopSchema )
+module.exports = model( 'Expense', ExpenseSchema )

@@ -25,6 +25,14 @@ exports.isAuthenticated = async ( req = request, res = response, next ) => {
 	} catch ( error ) {
 		
 		console.log( error )
+		if( error.message === 'jwt expired' ) {
+
+			return res.status( 401 ).json({
+				ok: false,
+				msg: 'La sesión expiró',
+				expiredAt: error.expiredAt
+			})
+		}
 
 		return res.status( 501 ).json({
 			ok: false,

@@ -9,7 +9,7 @@ const {
 
 module.exports = () => {
 
-	router.post('/users/signup',
+	router.post('/user/signup',
 		[
 			body('email')
 				.not().isEmpty().withMessage('El email es obligatorio')
@@ -22,7 +22,7 @@ module.exports = () => {
 		], 
 		SignUp
 	)
-	router.post('/users/signin', 
+	router.post('/user/signin', 
 		[
 			body('email')
 				.not().isEmpty().withMessage('El email es obligatorio')
