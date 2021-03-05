@@ -3,13 +3,24 @@ const { body } = require('express-validator')
 const validateInputs = require('../middlewares/validateInputs')
 const { isAuthenticated } = require('../middlewares/auth')
 const {
-	setEntry, updateEntry
+	setEntry, updateEntry, getEntrys,
+	getEntryById
 } = require('../controllers/entry.controller')
 
 
 module.exports = () => {
 
-	router.post('/create-entry',
+	router.get('/entry/:year', 
+		isAuthenticated,
+		getEntrys
+	)
+	
+	router.get('/entry/:entryId', 
+		isAuthenticated,
+		getEntryById
+	)
+	
+	router.post('/entry/create',
 		isAuthenticated,
 		[
 			body('amount').not().isEmpty().withMessage('La cantidad es requeridad'),
@@ -20,7 +31,7 @@ module.exports = () => {
 		setEntry
 	)
 
-	router.put('/create-entry/:entryId', 
+	router.put('/entry/update/:entryId', 
 		isAuthenticated,
 		[
 			body('amount').not().isEmpty().withMessage('La cantidad es requeridad'),
